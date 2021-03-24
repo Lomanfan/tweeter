@@ -1,0 +1,12 @@
+nav {
+  top: 0;
+  background-color: #4056A1;
+  height: 120px;
+  color: #FFFFFF;
+  font-family: 'Bungee';
+  padding: 1.5em;
+  position:sticky;
+  width: 100%;
+  display: box;
+  box-sizing: border-box;
+}

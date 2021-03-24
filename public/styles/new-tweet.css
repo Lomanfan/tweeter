@@ -1,0 +1,93 @@
+
+.new-tweet {width: 100%};
+
+form {
+  width: 100%;
+}
+
+
+textarea {
+  border: none;
+  border-bottom: 3px currentColor solid;
+  background: transparent;
+  width: 100%;
+}
+
+form button {
+  background-color: #4056A1;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Bungee';
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+}
+
+
+.numLimitRed {
+  color: red;
+  font-family: 'Bungee';
+}
+
+
+.tweet-container {
+  border: 5px solid #545149;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  width: 100%;
+}
+
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: initial;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+
+.tweet-header div {
+  display: flex;
+  align-items: center;
+}
+
+
+.tweet-header .avatar {
+  width: 30%;
+ height: auto;
+ background-color: transparent;
+}
+
+
+.tweet-container .tweet-body{
+  width: 100%;
+  border-bottom: 3px solid #545149;
+}
+
+
+.tweet-container .tweet-body p {
+  color: #545149;
+  font-weight: bold;
+  padding: 1.25rem;
+  word-wrap: break-word;
+}
+
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+footer .tweet-footer:hover {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #4056A1;
+}
