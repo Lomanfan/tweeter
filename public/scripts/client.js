@@ -1,71 +1,80 @@
 
-const renderTweets = function (tweets) {
-  // loops through tweets
-  for (const tweet of tweets) {
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    $(".container").append(createTweetElement(tweet));
-  }
+const escape = function (str) {               //escape function
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
-$(document).ready(function () {
 
-  const url = `/tweets`;
+const renderTweets = function (tweets) {
+  for (const tweet of tweets) {
+    $(".prepend-tweet").prepend(createTweetElement(tweet));
+  };
+};
+
+
+$(document).ready(function () {
+  const url = "/tweets";
 
   $("form").on("submit", function (event) {
-
     event.preventDefault();
 
-    if()
+    if ($("#tweet-text").val().length > 140) {
+      $("#errormsg1").slideDown();
+      return;
+    }
 
-    const tweetText = $(this).serialize();
-    console.log("text", tweetText);
+    if (!$("#tweet-text").val()) {
+      $("#errormsg2").slideDown();
+      return;
+    }
 
-    $.ajax({
-      url: url,
-      method: "POST",
-      data: tweetText,
-    })
-      .done(() => {
-        // console.log(data);
+    if ($("#tweet-text").val()) {
+      const tweetText = $(this).serialize();
+      console.log("text", tweetText);
+
+      $.ajax({
+        url: url,
+        method: "POST",
+        data: tweetText,
+      }).then((result) => {
+        console.log('ajax callback')
+        $(".errormessage").slideUp();
         loadTweets();
+        $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
+        $("#tweet-text").val("");
+      }).catch(err => {
+        console.log("ajax POST error.")
+        console.log(err);
       })
-      .fail((err) => {
-        console.log(err.message);
-      })
+    };
   });
+
 
   const loadTweets = () => {
     $.ajax({
       url: url,
       method: "GET",
+    }).then((result) => {
+      console.log('ajax callback');
+      console.log(result);
+      renderTweets(result);
+    }).catch(err => {
+      console.log('ajax error caught');
+      console.log(err);
     })
-      .done((data) => {
-        // console.log(data);
-        renderTweets(data);
-      })
-      .fail((err) => {
-        console.log(err.message);
-      })
-  };
-
+  }
   loadTweets();
-
 });
 
 
-
 const createTweetElement = function (tweet) {
-
   const today = new Date();
   const createdOn = new Date(tweet.created_at);
   const msInDay = 24 * 60 * 60 * 1000;
-
   createdOn.setHours(0, 0, 0, 0);
   today.setHours(0, 0, 0, 0);
-
   const diff = (today - createdOn) / msInDay;
-  console.log(diff);
 
   const $tweet = `<article class="tweet-container">
     <!---form for buttton or posting to backend, for database-->
@@ -77,7 +86,7 @@ const createTweetElement = function (tweet) {
       <span>${tweet.user.handle}</span>
     </header>
     <div class="tweet-body">
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
     </div>
     <div>
       <footer class="tweet-footer">

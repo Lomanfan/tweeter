@@ -41,11 +41,6 @@ $(document).ready(function () {
 //(add class, over zero, remove class, add css to the counter)
 
 
-
-
-
-
-
 //input
 //The event occurs when an element gets user input
 

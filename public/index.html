@@ -35,16 +35,16 @@
     <div>
       <img src="/images/profile-hex.png">
     </div>
-    <br>
-    <!--check this after????????-->
     <div>
-      <h2>Your Name</h2>
+      <h2>Loman</h2>
     </div>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <h3>Compose Tweet</h3>
+      <p id="errormsg1" class=errormessage>Message has exceeded the 140 characters limit.</p>
+      <p id="errormsg2" class=errormessage>Message cannot be empty.</p>
       <form method="POST" action="/tweets">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="numberLimit">
@@ -54,17 +54,18 @@
       </form>
     </section>
 
+    <section class="prepend-tweet">
     <article class="tweet-container">
       <!---form for buttton or posting to backend, for database-->
       <header class="tweet-header">
         <div>
           <img src="/images/profile-hex.png" class="avatar">
-          <span>user.name: Newton</span>
+          <span>Loman</span>
         </div>
-        <span>@SirIsacc</span>
+        <span>@Buddy</span>
       </header>
       <div class="tweet-body">
-        <p>If I have been further it is by standing on the shoulders of giants ....</p>
+        <p>“To a mind that is still the whole universe surrenders.” ― Lao Tzu</p>
       </div>
       <div>
         <footer class="tweet-footer">
@@ -72,6 +73,7 @@
         </footer>
       </div>
     </article>
+  </section>
   </main>
 </body>
 

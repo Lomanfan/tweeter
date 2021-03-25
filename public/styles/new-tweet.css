@@ -71,6 +71,8 @@ form div {
 .tweet-container .tweet-body{
   width: 100%;
   border-bottom: 3px solid #545149;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .tweet-container .tweet-body p {
@@ -78,7 +80,6 @@ form div {
   font-size: 20px;
   font-weight: bold;
   padding: 1.25rem;
-  word-wrap: break-word;
   padding: 5px;
   margin-top: 8px;
   margin-bottom: 5px;
@@ -89,3 +90,18 @@ form div {
   font-weight: bold;
 }
 
+#errormsg1 {
+  display: none;
+  border: 4px solid #4056A1;
+  color:  #545149;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#errormsg2 {
+  display: none;
+  border: 4px solid #4056A1;
+  color:  #545149;
+  font-size: 30px;
+  font-weight: bold;
+}
