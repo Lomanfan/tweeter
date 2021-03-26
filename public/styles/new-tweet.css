@@ -1,6 +1,4 @@
 
-  
-
 .new-tweet {width: 100%};
 
 .new-tweet {
@@ -13,10 +11,11 @@ form {
 
 textarea {
   border: none;
-  border-bottom: 4px solid #545149;
-  background: transparent;
-  width: 100%;
+  border-bottom: 0.2em solid #545149;
+  background: #eceae6c2;
+  width: 1422px;
   margin: 3px;
+  height: 135px;
 }
 
 form button {
@@ -94,16 +93,20 @@ form div {
 
 #errormsg1 {
   display: none;
-  border: 4px solid #4056A1;
-  color:  #545149;
-  font-size: 30px;
+  border: 0.275em solid lightpink;
+  color: #54494e;
+  font-size: .90em;
   font-weight: bold;
+  font-style: italic;
 }
 
 #errormsg2 {
   display: none;
-  border: 4px solid #4056A1;
-  color:  #545149;
-  font-size: 30px;
+  border: 0.275em solid lightpink;
+  color: #54494e;
+  font-size: .90em;
   font-weight: bold;
+  font-style: italic;
 }
+
+

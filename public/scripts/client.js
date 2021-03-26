@@ -77,7 +77,6 @@ const createTweetElement = function (tweet) {
   const diff = (today - createdOn) / msInDay;
 
   const $tweet = `<article class="tweet-container">
-    <!---form for buttton or posting to backend, for database-->
     <header class="tweet-header">
       <div>
         <img src="${tweet.user.avatars}" class="avatar">
