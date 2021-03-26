@@ -7,6 +7,18 @@ nav {
   padding: 1.5em;
   position:sticky;
   width: 100%;
-  display: box;
+  display: flex;
+  justify-content: space-between;
   box-sizing: border-box;
 }
+
+.nav-button a {
+ color: white;
+ font-family: "Source Sans Pro", sans-serif;
+ font-weight: bold;
+ text-decoration: none;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+

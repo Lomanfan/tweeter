@@ -14,7 +14,7 @@ textarea {
   border-bottom: 0.2em solid #545149;
   background: #eceae6c2;
   width: 1422px;
-  margin: 3px;
+  margin: 1.5em;
   height: 135px;
 }
 
@@ -36,6 +36,12 @@ form div {
   font-family: 'Bungee';
 }
 
+.prepend-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
 .tweet-container {
   border: 0.2em solid #545149;
   margin-top: 1.625rem;
@@ -55,6 +61,8 @@ form div {
   justify-content: space-between;
   height: initial;
   font-weight: bold;
+  margin-left: 0;
+  margin-right: 0;
   background-color: transparent;
 }
 
