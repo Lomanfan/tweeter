@@ -13,7 +13,7 @@ textarea {
   border: none;
   border-bottom: 0.2em solid #545149;
   background: #eceae6c2;
-  width: 1422px;
+  width: 90%;
   margin: 1.5em;
   height: 135px;
 }
@@ -39,7 +39,7 @@ form div {
 .prepend-tweet {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 70%;
 }
 
 .tweet-container {
@@ -101,7 +101,7 @@ form div {
 
 #errormsg1 {
   display: none;
-  border: 0.275em solid lightpink;
+  border: 0.275em solid red;
   color: #54494e;
   font-size: .90em;
   font-weight: bold;
@@ -110,7 +110,7 @@ form div {
 
 #errormsg2 {
   display: none;
-  border: 0.275em solid lightpink;
+  border: 0.275em solid red;
   color: #54494e;
   font-size: .90em;
   font-weight: bold;

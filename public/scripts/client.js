@@ -40,9 +40,11 @@ $(document).ready(function () {
       }).then((result) => {
         console.log('ajax callback')
         $(".errormessage").slideUp();
-        loadTweets();
-        $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
-        $("#tweet-text").val("");
+        return loadTweets().then(function () {
+          $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
+          $("#tweet-text").val("");
+        })
+
       }).catch(err => {
         console.log("ajax POST error.")
         console.log(err);
