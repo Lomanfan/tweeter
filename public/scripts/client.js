@@ -7,6 +7,8 @@ const escape = function (str) {               //escape function
 
 
 const renderTweets = function (tweets) {
+  $(".prepend-tweet").empty();
+  
   for (const tweet of tweets) {
     $(".prepend-tweet").prepend(createTweetElement(tweet));
   };
@@ -39,11 +41,12 @@ $(document).ready(function () {
         data: tweetText,
       }).then((result) => {
         console.log('ajax callback')
-        $(".errormessage").slideUp();
-        return loadTweets().then(function () {
+        $("#errormsg1").slideUp();
+        $("#errormsg2").slideUp();
+        loadTweets()
           $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
           $("#tweet-text").val("");
-        })
+        
 
       }).catch(err => {
         console.log("ajax POST error.")
@@ -84,18 +87,24 @@ const createTweetElement = function (tweet) {
         <img src="${tweet.user.avatars}" class="avatar">
         <span>${tweet.user.name}</span>
       </div>
-      <span>${tweet.user.handle}</span>
+      <div>
+        <span>${tweet.user.handle}</span>
+      </div>
     </header>
     <div class="tweet-body">
       <p>${escape(tweet.content.text)}</p>
     </div>
-    <div>
-      <footer class="tweet-footer">
-        <p>${diff} days ago</p>
-      </footer>
-    </div>
+    <footer class="tweet-footer">
+      <div>
+      <p>${diff} days ago</p>
+      </div>
+      <div class="tweet-icons">
+      <i class="far fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="far fa-heart"></i>
+      </div>
+    </footer>
   </article>`;
 
   return $tweet;
 };
-

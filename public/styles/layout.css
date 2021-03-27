@@ -15,7 +15,7 @@ html {
  * Global layout stuff
  */
 
-body {
+ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 1.5em;
@@ -45,11 +45,10 @@ size: 0.1rem;
 }
 
 @media only screen and (max-width: 1024px) {
-.reponsive {
-  display: inline-block;
+  .reponsive {
+    display: inline-block;
+  }
 }
-}
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

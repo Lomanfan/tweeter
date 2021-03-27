@@ -1,21 +1,27 @@
-
 .new-tweet {width: 100%};
 
 .new-tweet {
+  margin-top: 20px;
   margin-bottom: 30px;
+  width: 90%;
 }
 
-form {
-  width: 100%;
+section.new-tweet {
+  width: 90%;
+  padding-top: 18px;
+  padding-bottom: 10px;
 }
+
 
 textarea {
   border: none;
   border-bottom: 0.2em solid #545149;
   background: #eceae6c2;
-  width: 90%;
-  margin: 1.5em;
-  height: 135px;
+  width: 88%;
+  padding-left: 3%;
+  margin-left: 10px;
+  height: 100px;
+  
 }
 
 form button {
@@ -29,6 +35,10 @@ form div {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee';
+  width: 90%;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 10px;
 }
 
 .numLimitRed {
@@ -39,15 +49,16 @@ form div {
 .prepend-tweet {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
 }
 
 .tweet-container {
   border: 0.2em solid #545149;
-  margin-top: 1.625rem;
-  margin-bottom: -0.375rem;
-  padding: 1.625rem;
-  width: 100%;
+  margin-top: 0.625rem;
+  margin-bottom: 1.625rem;
+  margin-right: 20px;
+  padding: 0.625rem;
+  width: 90%;
 }
 
 .tweet-container:hover {
@@ -61,8 +72,6 @@ form div {
   justify-content: space-between;
   height: initial;
   font-weight: bold;
-  margin-left: 0;
-  margin-right: 0;
   background-color: transparent;
 }
 
@@ -72,9 +81,8 @@ form div {
 }
 
 .tweet-header .avatar {
-  width: 28%;
-  height: auto;
-  background-color: transparent;
+  width: 4em;
+  height: 50%;
 }
 
 .tweet-container .tweet-body{
@@ -86,17 +94,29 @@ form div {
 
 .tweet-container .tweet-body p {
   color: #545149;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   padding: 1.25rem;
   padding: 5px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-bottom: 5px;
+}
+
+.tweet-footer .tweet-icons {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-footer .tweet-icons:hover {
+  padding-top: 27px;
 }
 
 .tweet-footer {
   font-size: 0.8em;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
 
 #errormsg1 {
@@ -116,5 +136,4 @@ form div {
   font-weight: bold;
   font-style: italic;
 }
-
 

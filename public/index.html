@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Meta Information -->
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
@@ -13,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -21,7 +21,7 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <script src="https://kit.fontawesome.com/5747e37874.js" crossorigin="anonymous"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -38,7 +38,7 @@
     </div>
   </nav>
   <div class="reponsive">
-    <header>
+    <header id="profile">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -56,33 +56,15 @@
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="numberLimit">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" >140</output>
           </div>
         </form>
       </section>
 
       <section class="prepend-tweet">
-        <article class="tweet-container">
-          <!---form for buttton or posting to backend, for database-->
-          <header class="tweet-header">
-            <div>
-              <img src="https://i.imgur.com/nlhLi3I.png" class="avatar">
-              <span>Loman</span>
-            </div>
-            <span>@Buddy</span>
-          </header>
-          <div class="tweet-body">
-            <p>“To a mind that is still the whole universe surrenders.” ― Lao Tzu</p>
-          </div>
-          <div>
-            <footer class="tweet-footer">
-              <p>10 days ago</p>
-            </footer>
-          </div>
-        </article>
+        <!-- Tweet Container from Client.js -->
       </section>
     </main>
   </div>
 </body>
-
 </html>
