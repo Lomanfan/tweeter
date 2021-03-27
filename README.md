@@ -6,13 +6,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-Mobile view
+###Mobile view
 ![Mobile view](https://github.com/Lomanfan/tweeter/blob/master/doc/Mobile%20Tweet%20View.png)
 
-Mobile view & error message displays when submitting an empty message.
+###Mobile view & error message displays when submitting an empty message.
 ![Mobile view & error message displays when submitting an empty message.](https://github.com/Lomanfan/tweeter/blob/master/doc/Error%20Message.png)
 
-Desktop view & error message displays when submitting over 140-character limit.
+###Desktop view & error message displays when submitting over 140-character limit.
 ![Desktop view & error message displays when submitting over 140-character limit.](https://github.com/Lomanfan/tweeter/blob/master/doc/Screenshot%20from%202021-03-27%2010-34-57.png)
 
 
