@@ -16,9 +16,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   flex-direction: column;
-  
   background-color:lightpink;
   background-blend-mode: hue;
   background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png") ;
