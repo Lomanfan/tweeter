@@ -1,24 +1,24 @@
 
-const escape = function (str) {               //escape function
+const escape = function(str) {               //escape function
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   $(".prepend-tweet").empty();
-  
+
   for (const tweet of tweets) {
     $(".prepend-tweet").prepend(createTweetElement(tweet));
   };
 };
 
 
-$(document).ready(function () {
+$(document).ready(function() {
   const url = "/tweets";
 
-  $("form").on("submit", function (event) {
+  $("form").on("submit", function(event) {
     event.preventDefault();
 
     if ($("#tweet-text").val().length > 140) {
@@ -44,9 +44,9 @@ $(document).ready(function () {
         $("#errormsg1").slideUp();
         $("#errormsg2").slideUp();
         loadTweets()
-          $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
-          $("#tweet-text").val("");
-        
+        $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
+        $("#tweet-text").val("");
+
 
       }).catch(err => {
         console.log("ajax POST error.")
@@ -73,7 +73,7 @@ $(document).ready(function () {
 });
 
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const today = new Date();
   const createdOn = new Date(tweet.created_at);
   const msInDay = 24 * 60 * 60 * 1000;
