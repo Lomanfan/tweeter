@@ -1,13 +1,15 @@
-$(document).ready(function () {
-  $("#tweet-text").on('keyup', function () {
+$(document).ready(function() {
+  
+  $("#tweet-text").on("keyup", function () {
+
+    let counter = $(this).siblings(".numberLimit").find(".counter")
     const numLimit = 140 - $(this).val().length;
+    // console.log($(this).val());
 
-    if (numLimit < 0) {
-      $(this).siblings(".numberLimit").find(".counter").html(numLimit).addClass("numLimitRed");
+    if( numLimit < 0) {
+      return counter.html(numLimit).css("color", "red");
     }
 
-    if (numLimit > 0) {
-      $(this).siblings(".numberLimit").find(".counter").html(numLimit).removeClass("numLimitRed");
-    }
+    return counter.html(numLimit).css("color", "black");
   });
 });
