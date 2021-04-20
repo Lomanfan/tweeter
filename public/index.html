@@ -20,6 +20,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -44,6 +45,8 @@
   <main class="container"></main>
     <section class="new-tweet">
       <h3>Compose Tweet</h3>
+      <p id="errormsg1" class=errormessage>Message has exceeded the 140 characters limit.</p>
+      <p id="errormsg2" class=errormessage>Message cannot be empty.</p>
       <form method="POST" action="/tweets">
       <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
       <div class="numberLimit">
