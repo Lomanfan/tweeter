@@ -1,8 +1,5 @@
-
 $(document).ready(function () {
-
-  $("#tweet-text").on('keyup', function (event) {
-
+  $("#tweet-text").on('keyup', function () {
     const numLimit = 140 - $(this).val().length;
 
     if (numLimit < 0) {
@@ -12,6 +9,5 @@ $(document).ready(function () {
     if (numLimit > 0) {
       $(this).siblings(".numberLimit").find(".counter").html(numLimit).removeClass("numLimitRed");
     }
-
   });
 });
