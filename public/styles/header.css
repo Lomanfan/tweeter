@@ -1,34 +1,11 @@
 header {
   height: 400px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   align-items: center;
   flex-direction: column;
-  background-color:lightpink;
-  background-blend-mode: hue;
-  background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png") ;
+  background-color: cadetblue;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
-header {
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color:lightpink;
-  background-blend-mode: hue;
-  background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png") ;
-}
-
-@media only screen and (min-width: 1024px) {
-  header {
-    justify-content: flex-end;
-    margin-left: 5%;
-    margin-right: 10%;
-    margin-top: 10%;
-    height: 400px;
-    width: 95%;
-  }
-}
