@@ -11,4 +11,9 @@ $(document).ready(function() {
 
     return counter.html(numLimit).css("color", "black");
   });
+
+
+  $(".daysAgo").html(timeago.format(new Date()));  //timeago();
+
+  
 });
