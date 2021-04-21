@@ -15,7 +15,7 @@ section.new-tweet {
 textarea {
   border: none;
   border-bottom: 0.2em solid #545149;
-  background: #eceae6c2;
+  background: #e1e7f19f;
   width: 88%;
   padding-left: 3%;
   margin-left: 3%;
@@ -23,7 +23,7 @@ textarea {
 }
 
 form button {
-  background-color: #4056A1;
+  background-color: #055659;
   color: white;
   text-transform: uppercase;
   font-family: "Bungee";
@@ -37,4 +37,72 @@ form div {
   padding-left: 45px;
   padding-right: 45px;
   padding-bottom: 10px;
+}
+
+.prepend-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.tweet-container {
+  border: 0.2em solid #545149;
+  margin-top: 0.625rem;
+  margin-bottom: 1.625rem;
+  margin-right: 20px;
+  padding: 0.625rem;
+  width: 90%;
+}
+
+.tweet-container:hover {
+  color:#4056A1;
+  box-shadow: inset 0px 0px 16px 1px rgb(57 79 202 / 31%)
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: initial;
+  font-weight:bold;
+  background-color: transparent;
+}
+
+.tweet-header .avatar {
+  width: 4em;
+  height: 50%;
+}
+
+.tweet-container .tweet-body{
+  width: 100%;
+  border-bottom: 3px solid #545149;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.tweet-container .tweet-body p {
+  color: #545149;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 1.25rem;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.tweet-footer .tweet-icons {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-footer .tweet-icons:hover {
+  padding-top: 27px;
+}
+
+.tweet-footer {
+  font-size: 0.8em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
