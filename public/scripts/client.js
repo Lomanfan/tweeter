@@ -1,3 +1,9 @@
+const escape = function (str) {                //prevent XSS with escape
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const renderTweets = function (tweets) {
   $(".prepend-tweet").empty();
   for (const tweet of tweets) {
@@ -32,9 +38,8 @@ $(document).ready(function () {
         data: tweetText,
       }).then((result) => {
         loadTweets();
-
-        $(".counter").html(140);
-        $("#tweet-text").val("");
+        $(".counter").text(140);         //reset character counter to 140
+        $("#tweet-text").val("");        //clear tweet-box
       }).catch(err => {
         console.log("ajax POST error", err);
       })
@@ -68,7 +73,7 @@ const createTweetElement = function (tweet) {
     </div>
   </header>
   <div class="tweet-body">
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
   </div>
   <footer class="tweet-footer">
     <div>
