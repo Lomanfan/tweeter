@@ -12,7 +12,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     if ($("#tweet-text").val().length > 140) {
-      $("errormsg1").slideDown();
+      $("#errormsg1").slideDown();
       return;
     }
 
@@ -22,19 +22,19 @@ $(document).ready(function () {
     }
 
     if ($("#tweet-text").val()) {
+      $("#errormsg1").slideUp();
+      $("#errormsg2").slideUp();
       const tweetText = $(this).serialize();
-      console.log("text", tweetText);
 
       $.ajax({
         url,
         method: "POST",
         data: tweetText,
       }).then((result) => {
-        $("#errormsg1").slideUp();
-        $("#errormsg2").slideUp();
         loadTweets();
-        $("#tweet-text").siblings(".numberLimit").find(".counter").html("0");
-        $("tweet-text").val("");
+
+        $(".counter").html(140);
+        $("#tweet-text").val("");
       }).catch(err => {
         console.log("ajax POST error", err);
       })
