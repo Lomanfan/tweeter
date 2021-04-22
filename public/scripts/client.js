@@ -1,13 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
 const renderTweets = function (tweets) {
   $(".prepend-tweet").empty();
-
   for (const tweet of tweets) {
     $(".prepend-tweet").prepend(createTweetElement(tweet));
   };
@@ -49,21 +41,22 @@ $(document).ready(function () {
     };
   });
 
- const loadTweets = () => {
-   $.ajax({
-     url,
-     method: "GET",
-   }).then((result) => {
-     renderTweets(result);
-   }).catch(err => {
-     console.log("ajax error caught", err);
-   })
- }
- loadTweets();
-
+  const loadTweets = () => {
+    $.ajax({
+      url,
+      method: "GET",
+    }).then((result) => {
+      renderTweets(result);
+      timeago.render(document.querySelectorAll('.daysAgo'));
+    }).catch(err => {
+      console.log("ajax error caught", err);
+    })
+  }
+  loadTweets();
 });
 
 const createTweetElement = function (tweet) {
+  const createdOn = new Date(tweet.created_at);
   const $tweet = `<article class="tweet-container">
   <header class="tweet-header">
     <div>
@@ -79,7 +72,7 @@ const createTweetElement = function (tweet) {
   </div>
   <footer class="tweet-footer">
     <div>
-    <p class="daysAgo"></p>
+    <span class="daysAgo" datetime="${createdOn.toISOString()}"></span>
     </div>
     <div class="tweet-icons">
     <i class="far fa-flag"></i>
@@ -87,7 +80,6 @@ const createTweetElement = function (tweet) {
     <i class="far fa-heart"></i>
     </div>
   </footer>
-</article>`;
-
-return $tweet;
+  </article>`;
+  return $tweet;
 };
