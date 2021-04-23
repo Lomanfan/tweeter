@@ -6,18 +6,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-### Mobie view:
-![Mobile view](https://github.com/Lomanfan/tweeter/blob/master/doc/Mobile%20Tweet%20View.png)
+### Desktop view
+![Desktop view & error message displays when submitting over 140-character limit.](https://github.com/Lomanfan/tweeter/blob/master/doc/desktopView.png)
+
+### Error message on empty submission. (Erorr message for over character limit is displayed in the same method.)
+![Error message displays](https://github.com/Lomanfan/tweeter/blob/master/doc/errorMsgs.png)
 
 ### Responsive feature:
-![Responsive feature:](https://github.com/Lomanfan/tweeter/blob/master/doc/responsive%20feature.png)
-
-### Mobile view & error message displays when submitting an empty message:
-![Mobile view & error message displays when submitting an empty message.](https://github.com/Lomanfan/tweeter/blob/master/doc/Error%20Message.png)
-
-### Desktop view & error message displays when submitting over 140-character limit:
-![Desktop view & error message displays when submitting over 140-character limit.](https://github.com/Lomanfan/tweeter/blob/master/doc/Screenshot%20from%202021-03-27%2010-34-57.png)
-
+![Responsive feature:](https://github.com/Lomanfan/tweeter/blob/master/doc/responsiveCapture.png)
 
 ## Getting Started
 
