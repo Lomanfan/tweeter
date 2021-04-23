@@ -1,3 +1,11 @@
 node_modules/
 .env
 .DS_Store
+
+index2.html
+header2.css
+layout2.css
+nav2.css
+new-tweet2.css
+composer-char-counter2.js
+client2.js
