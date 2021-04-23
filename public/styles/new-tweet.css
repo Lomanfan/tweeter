@@ -3,22 +3,21 @@
 .new-tweet {
   margin-top: 20px;
   margin-bottom: 30px;
-  width: 90%;
+  width: 100%;
 }
 
 section.new-tweet {
-  width: 90%;
-  padding-top: 18px;
-  padding-bottom: 10px;
+  width: 100%;
+  padding-top: 13px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 textarea {
   border: none;
-  border-bottom: 0.2em solid #545149;
+  border-bottom: 0.15em solid #545149;
   background: #e1e7f19f;
-  width: 88%;
-  padding-left: 3%;
-  margin-left: 3%;
+  width: 100%;
   height: 100px;
 }
 
@@ -33,16 +32,19 @@ form div {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee";
-  width: 90%;
-  padding-left: 45px;
-  padding-right: 45px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-bottom: 10px;
 }
 
 .prepend-tweet {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
+  padding: 50px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .tweet-container {
@@ -51,7 +53,7 @@ form div {
   margin-bottom: 1.625rem;
   margin-right: 20px;
   padding: 0.625rem;
-  width: 90%;
+  width: 100%;
 }
 
 .tweet-container:hover {
@@ -68,9 +70,14 @@ form div {
   background-color: transparent;
 }
 
+.tweet-header div {
+  display: flex;
+  align-items: center;
+}
+
 .tweet-header .avatar {
-  width: 4em;
-  height: 50%;
+  width: 2.5em;
+  height: 45%;
 }
 
 .tweet-container .tweet-body{
@@ -82,22 +89,39 @@ form div {
 
 .tweet-container .tweet-body p {
   color: #545149;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 16px;
+  /* font-weight: bold; */
   padding: 1.25rem;
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.tweet-footer .tweet-icons {
-  padding-top: 22px;
-  display: flex;
+.tweet-footer {
+  padding-top: 5px;
+  display: flow-root;
   justify-content: space-between;
 }
 
 .tweet-footer .tweet-icons:hover {
-  padding-top: 27px;
+  padding: 5px;
+  display: flow-root;
+  justify-content: space-between;
+}
+
+#flag:hover {
+  cursor: pointer;
+  color: sandybrown;
+}
+
+#retweet:hover {
+  cursor: pointer;
+  color: green;
+}
+
+#heart:hover{
+  cursor:pointer;
+  color:red;
 }
 
 .tweet-footer {
@@ -105,4 +129,24 @@ form div {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+}
+
+.responsive {
+  width: 100%;
+}
+
+#errormsg1 {
+  display: none;
+  color: red;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#errormsg2 {
+  display: none;
+  color: red;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-style: italic;
 }
