@@ -86,9 +86,9 @@ const createTweetElement = function (tweet) {
     <span class="daysAgo" datetime="${createdOn.toISOString()}"></span>
     </div>
     <div class="tweet-icons">
-    <i class="far fa-flag"></i>
-    <i class="fas fa-retweet"></i>
-    <i class="far fa-heart"></i>
+      <span><i class="far fa-flag" id="flag"></i></span>
+      <span><i class="fas fa-retweet" id="retweet"></i></span>
+      <span><i class="far fa-heart" id="heart"></i></span>
     </div>
   </footer>
   </article>`;
